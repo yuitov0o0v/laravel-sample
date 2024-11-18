@@ -10,4 +10,3 @@ Route::get('/maintenance', function () {
     return 'This page is under maintenance.';
 });
 
-                                    
