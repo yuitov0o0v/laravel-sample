@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('post', function (Blueprint $table) {
-            $table->bigInteger('id')->unsigned();
-            $table->bigInteger('user_id')->unsigned();
-            $table->string('name', 255);
-            $table->text('contents');
+        Schema::create('companies', function (Blueprint $table) {
+            $table->id();
+            $table->string(column: 'name');
+            $table->string(column: 'address');
+            $table->timestamps();
         });
     }
 
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('companies');
     }
 };
